@@ -1,54 +1,75 @@
-# Astro Starter Kit: Basics
+![Captura de pantalla 2023-12-29 201121](https://github.com/fredyfare/portfolio/assets/114101081/e697171f-9951-4911-ad6b-30ad4a7a8ad9)
 
-```sh
-npm create astro@latest -- --template basics
+# Astro Portfolio <img src="https://astro.build/assets/press/astro-icon-light-gradient.png" width=30 height=30 alt="Astro Icon">
+This **portfolio** was made following the [Web Portfolio with Astro, HTML, CSS and TailwindCSS Tutorial](https://youtu.be/HEMvsJTBweY?si=CZZ5qyRKDzLc6iGu) by [midudev](https://github.com/midudev). Go take a look of it: <a href="https://portfolio-sand-six-71.vercel.app/">Alfredo Fabila's Portfolio - Web Developer</a>.
+
+## Project structure
+
+```
+└── 📁portfolio
+    └── .gitignore
+    └── 📁.vscode
+        └── extensions.json
+        └── launch.json
+        └── settings.json
+    └── astro.config.mjs
+    └── package-lock.json
+    └── package.json
+    └── 📁public
+        └── fabilareyesalfredo.webp
+        └── favicon.svg
+        └── 📁projects
+            └── NotWordle.webp
+            └── Valorents.webp
+    └── README.md
+    └── 📁src
+        └── 📁assets
+            └── 📁icons
+                └── Briefcase.astro
+                └── Code.astro
+                └── CSS.astro
+                └── GitHub.astro
+                └── HTML.astro
+                └── JavaScript.astro
+                └── LinkedIn.astro
+                └── Mail.astro
+                └── React.astro
+        └── 📁components
+            └── Badge.astro
+            └── Experience.astro
+            └── ExperienceItem.astro
+            └── Footer.astro
+            └── Header.astro
+            └── Pill.astro
+            └── Projects.astro
+            └── SectionContainer.astro
+        └── env.d.ts
+        └── 📁layouts
+            └── Layout.astro
+        └── 📁pages
+            └── index.astro
+    └── tailwind.config.mjs
+    └── tsconfig.json
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## How to run the project
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Installing dependencies
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm i
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Starting the project
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+npm run dev
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Resources
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Gradientes: https://bg.ibelick.com
+- Tabler Icons: https://tabler.io/icons
+- Mockups: https://www.shots.so/
+- Image optimizer: https://squoosh.app/
+- Original portfolio by midudev: https://porfolio.dev/
