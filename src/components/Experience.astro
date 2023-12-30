@@ -1,0 +1,21 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Aug 2023 - Nov 2023",
+    title: "Programming Trainee - marinero.mx",
+    description:
+      "Created no-code automation workflows. Developed a quoting tool using HTML, CSS, and JS. Learned React-Native to support the mobile development team.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

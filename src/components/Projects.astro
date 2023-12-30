@@ -1,0 +1,75 @@
+---
+import HTML from "../assets/icons/HTML.astro";
+import CSS from "../assets/icons/CSS.astro";
+import JavaScript from "../assets/icons/JavaScript.astro";
+import React from "../assets/icons/React.astro";
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-[#1e1e2c] text-white",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#1e1e2c] text-white",
+    icon: CSS,
+  },
+  JavaScript: {
+    name: "JavaScript",
+    class: "bg-[#1e1e2c] text-white",
+    icon: JavaScript,
+  },
+  React: {
+    name: "React",
+    class: "bg-[#1e1e2c] text-white",
+    icon: React,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Valorents",
+    description:
+      "Developed a web page that allows you to choose an agent from Valorant and see all their information.",
+    link: "https://valorents.vercel.app/",
+    github: "https://github.com/fredyfare/Valorents",
+    image: "/projects/Valorents.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.React],
+  },
+  {
+    title: "NotWordle",
+    description:
+      "Developed a Wordle clone with rush mode and restart game features.",
+    link: "https://not-wordle-navy.vercel.app/",
+    github: "https://github.com/fredyfare/NotWordle",
+    image: "/projects/NotWordle.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.React],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article class="mb-6">
+      <h3 class="text-2xl font-semibold text-red-200/90 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class} border border-white/10`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        loading="lazy"
+        class="rounded shadow-xl shadow-white/5 aspect-video"
+        src={image}
+        alt={`${title} project image`}
+      />
+    </article>
+  ))
+}

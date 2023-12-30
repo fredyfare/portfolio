@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import Pill from "../components/Pill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
+import LinkedInIcon from "../assets/icons/LinkedIn.astro";
+import GitHubIcon from "../assets/icons/GitHub.astro";
+import MailIcon from "../assets/icons/Mail.astro";
+import BriefcaseIcon from "../assets/icons/Briefcase.astro";
+import CodeIcon from "../assets/icons/Code.astro";
+---
+
+<Layout
+  title="Alfredo Fabila's Portfolio - Web Developer"
+  description="Web developer and programmer with experience using MERN stack."
+>
+  <main class="px-4">
+    <SectionContainer id="profile" class="py-44 pb-32">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="/fabilareyesalfredo.webp"
+        alt="Alfredo Fabila Reyes' photo"
+      />
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, I'm Alfredo <a
+          class="flex items-center"
+          href="https://www.linkedin.com/in/alfredo-fabila-reyes-482b51267/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <!-- <Badge>Available for hire</Badge> -->
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-white">
+        <span class="text-red-200/90">Full Stack Web Developer</span>
+         specialized in creating applications with MERN stack.
+        <p class="text-xl mt-4 opacity-70">
+          <i>
+            "The most important words a man can say are, “I will do better." -
+            Brandon Sanderson, Oathbringer
+          </i>
+        </p>
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <Pill
+          href="https://www.linkedin.com/in/alfredo-fabila-reyes-482b51267/"
+        >
+          <LinkedInIcon class="size-4 md:size-6" />
+           LinkedIn
+        </Pill>
+        <Pill href="https://github.com/fredyfare">
+          <GitHubIcon class="size-4 md:size-6" />
+           GitHub
+        </Pill>
+        <Pill href="mailto:fabilareyesalfredo@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+           fabilareyesalfredo@gmail.com
+        </Pill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-7" />
+         Professional experience
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+         Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>
